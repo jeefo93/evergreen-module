@@ -61,7 +61,7 @@ function Update-Evergreen {
         Write-Message -Message "Found Evergreen apps release: $($EvergreenAppsZip.Version)"
     }
     catch {
-        Write-Debug -Message ('{0}' -f (Out-String -InputObject ($_ | Select-Object -Property *)))
+        Write-Debug -Message (Out-String -InputObject ($_ | Select-Object -Property *))
         $EvergreenAppsRelease = $null
     }
 
