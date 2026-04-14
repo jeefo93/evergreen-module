@@ -155,10 +155,17 @@ function Save-EvergreenApp {
                 }
                 if ($PSBoundParameters.ContainsKey("Proxy")) {
                     $params.Proxy = $Proxy
+                    if ($PSBoundParameters.ContainsKey("ProxyCredential")) {
+                        $params.ProxyCredential = $ProxyCredential
+                    }
                 }
-                if ($PSBoundParameters.ContainsKey("ProxyCredential")) {
-                    $params.ProxyCredential = $ProxyCredential
+                if (Test-ProxyEnv) {
+                    $params.Proxy = $script:EvergreenProxy
+                    if (Test-ProxyEnv -Creds) {
+                        $params.ProxyCredential = $script:EvergreenProxyCreds
+                    }
                 }
+
                 # Output the parameters when using -Verbose
                 foreach ($item in $params.GetEnumerator()) {
                     Write-Verbose -Message "Invoke-WebRequest parameter: $($item.name): $($item.value)."

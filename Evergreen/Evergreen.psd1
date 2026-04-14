@@ -69,13 +69,13 @@ PowerShellVersion = '4.0'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @('ConvertTo-DotNetVersionClass', 'Export-EvergreenApp', 
-               'Export-EvergreenManifest', 'Find-EvergreenApp', 'Get-EvergreenApp', 
-               'Get-EvergreenAppFromApi', 'Get-EvergreenAppFromLibrary', 
-               'Get-EvergreenAppsPath', 'Get-EvergreenEndpointFromApi', 
-               'Get-EvergreenLibrary', 'New-EvergreenLibrary', 'Save-EvergreenApp', 
-               'Start-EvergreenLibraryUpdate', 'Test-EvergreenApp', 
-               'Update-Evergreen')
+FunctionsToExport = @('ConvertTo-DotNetVersionClass', 'Export-EvergreenApp',
+               'Export-EvergreenManifest', 'Find-EvergreenApp', 'Get-EvergreenApp',
+               'Get-EvergreenAppFromApi', 'Get-EvergreenAppFromLibrary',
+               'Get-EvergreenAppsPath', 'Get-EvergreenEndpointFromApi',
+               'Get-EvergreenLibrary', 'New-EvergreenLibrary', 'Save-EvergreenApp',
+               'Start-EvergreenLibraryUpdate', 'Test-EvergreenApp',
+               'Update-Evergreen','Set-EvergreenProxy')
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
@@ -84,8 +84,8 @@ CmdletsToExport = @()
 # VariablesToExport = @()
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = 'sea', 'gea', 'fea', 'tea', 'iea', 'Invoke-EvergreenLibraryUpdate', 
-               'Get-EvergreenLibraryApp', 'Invoke-EvergreenApp', 
+AliasesToExport = 'sea', 'gea', 'fea', 'tea', 'iea', 'Invoke-EvergreenLibraryUpdate',
+               'Get-EvergreenLibraryApp', 'Invoke-EvergreenApp',
                'Get-EvergreenEndpoint'
 
 # DSC resources to export from this module

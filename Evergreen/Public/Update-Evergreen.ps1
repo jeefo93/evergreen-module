@@ -1,6 +1,6 @@
 function Update-Evergreen {
     <#
-        .EXTERNALHELP Evergreen-help.xml     
+        .EXTERNALHELP Evergreen-help.xml
     #>
     [CmdletBinding(SupportsShouldProcess = $false)]
     param(
@@ -61,6 +61,7 @@ function Update-Evergreen {
         Write-Message -Message "Found Evergreen apps release: $($EvergreenAppsZip.Version)"
     }
     catch {
+        Write-Debug -Message ('{0}' -f (Out-String -InputObject ($_ | Select-Object -Property *)))
         $EvergreenAppsRelease = $null
     }
 
